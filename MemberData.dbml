@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="OnlineReg" Class="MemberDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=OnlineReg;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="OnlineRegConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.RegParticipation" Member="RegParticipations">
+    <Type Name="RegParticipation">
+      <Column Name="ParticipationID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ActivityID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentNum" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="RegMember_RegParticipation" Member="RegMember" ThisKey="MemberID" OtherKey="MemberID" Type="RegMember" IsForeignKey="true" />
+      <Association Name="RegActivity_RegParticipation" Member="RegActivity" ThisKey="ActivityID" OtherKey="ActivityID" Type="RegActivity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegOrder" Member="RegOrders">
+    <Type Name="RegOrder">
+      <Column Name="OrderID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="EventID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PayerID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="RegMember_RegOrder" Member="RegMember" ThisKey="MemberID" OtherKey="MemberID" Type="RegMember" IsForeignKey="true" />
+      <Association Name="RegEvent_RegOrder" Member="RegEvent" ThisKey="EventID" OtherKey="EventID" Type="RegEvent" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegPayPalInfo" Member="RegPayPalInfos">
+    <Type Name="RegPayPalInfo">
+      <Column Name="PayPalInfoID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PayerID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PayPalQS" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegMember" Member="RegMembers">
+    <Type Name="RegMember">
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrgID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent2Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent1Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent1FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Occupation" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2Occupation" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FamilyDoctor" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DoctorPhone" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="School" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ParticipationID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="RegMember_RegParticipation" Member="RegParticipations" ThisKey="MemberID" OtherKey="MemberID" Type="RegParticipation" />
+      <Association Name="RegMember_RegOrder" Member="RegOrders" ThisKey="MemberID" OtherKey="MemberID" Type="RegOrder" />
+      <Association Name="RegMember_RegPlayer" Member="RegPlayers" ThisKey="MemberID" OtherKey="MemberID" Type="RegPlayer" />
+      <Association Name="RegOrg_RegMember" Member="RegOrg" ThisKey="OrgID" OtherKey="OrgID" Type="RegOrg" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegOrg" Member="RegOrgs">
+    <Type Name="RegOrg">
+      <Column Name="OrgID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="URL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HeaderBannerPic" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TeamPic" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TeamName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TeamDesc" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TeamMessage" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="TeamRestriction1" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="TeamRestriction2" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="TeamContactInfo" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="CutOffDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TeamHeaderName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TeamContactEmail" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ThankYouMessage" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Association Name="RegOrg_RegMember" Member="RegMembers" ThisKey="OrgID" OtherKey="OrgID" Type="RegMember" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegActivity" Member="RegActivities">
+    <Type Name="RegActivity">
+      <Column Name="ActivityID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ActivityName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="OrgID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="RegActivity_RegParticipation" Member="RegParticipations" ThisKey="ActivityID" OtherKey="ActivityID" Type="RegParticipation" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegEvent" Member="RegEvents">
+    <Type Name="RegEvent">
+      <Column Name="EventID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventName" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="EventPrice" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrgID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="RegEvent_RegOrder" Member="RegOrders" ThisKey="EventID" OtherKey="EventID" Type="RegOrder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vEverythingReport" Member="vEverythingReports">
+    <Type Name="vEverythingReport">
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Guardian1FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian1LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian1Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian1Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Guardian2FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian2LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian2Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian2Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlayerFirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PlayerLastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="StreetAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="OtherSpringSport" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PrimaryCommitment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="OrgID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PlayerID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegSpecEvent" Member="RegSpecEvents">
+    <Type Name="RegSpecEvent">
+      <Column Name="SpecEventID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SpecEventName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PlayerID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PayerID" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vRisingStarRegistration" Member="vRisingStarRegistrations">
+    <Type Name="vRisingStarRegistration">
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Parent1FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpecEventName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TeamName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PlayerID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PlayerFirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PlayerLastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LeagueName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vFallBall" Member="vFallBalls">
+    <Type Name="vFallBall">
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="Parent1FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SpecEventName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TeamName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PlayerID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PlayerFirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PlayerLastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LeagueName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vMemberPaid" Member="vMemberPaids">
+    <Type Name="vMemberPaid">
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent1FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent2FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MoneyPaid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlayerCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="OrgID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegPlayer" Member="RegPlayers">
+    <Type Name="RegPlayer">
+      <Column Name="PlayerID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PlayerFirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PlayerLastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="StreetAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HeathIssues" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="OtherSpringSport" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PrimaryCommitment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="RegMember_RegPlayer" Member="RegMember" ThisKey="MemberID" OtherKey="MemberID" Type="RegMember" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vNotMemberPaid" Member="vNotMemberPaids">
+    <Type Name="vNotMemberPaid">
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrgID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent2Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent1Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent1FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Occupation" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2Occupation" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FamilyDoctor" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DoctorPhone" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="School" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ParticipationID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vNotMemberPaidLastYear" Member="vNotMemberPaidLastYears">
+    <Type Name="vNotMemberPaidLastYear">
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrgID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent2Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent1Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Parent1FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Occupation" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent1Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2Occupation" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Parent2Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FamilyDoctor" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DoctorPhone" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="School" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ParticipationID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetEverythingData" Method="GetEverythingData">
+    <Parameter Name="CutOffDate" Parameter="cutOffDate" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="OrgID" Parameter="orgID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AGE" Parameter="aGE" Type="System.String" DbType="VarChar(5)" />
+    <ElementType Name="GetEverythingDataResult">
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Guardian1FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian1LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian1Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian1Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Guardian2FirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian2LastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian2Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Guardian2Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlayerFirstName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PlayerLastName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HeathIssues" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="StreetAddress" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Sex" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="OtherSpringSport" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PrimaryCommitment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="OrgID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

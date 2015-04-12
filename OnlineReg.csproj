@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{594DB992-E896-4CDE-BEF5-FAC3E5FDE16D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineReg</RootNamespace>
+    <AssemblyName>OnlineReg</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgeReport.aspx" />
+    <Content Include="BackUp.aspx" />
+    <Content Include="Confirmation.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="content\amll.jpg" />
+    <Content Include="content\AMLLTeam.jpg" />
+    <Content Include="content\Excel.png" />
+    <Content Include="content\logo-BB.png" />
+    <Content Include="controls\footer.ascx" />
+    <Content Include="controls\Head.ascx" />
+    <Content Include="controls\HeaderMenu.ascx" />
+    <Content Include="DatePicker\img\boxBottomLeftCorner.png" />
+    <Content Include="DatePicker\img\boxBottomRightCorner.png" />
+    <Content Include="DatePicker\img\boxSideWallPx.gif" />
+    <Content Include="DatePicker\img\boxSideWallPx.png" />
+    <Content Include="DatePicker\img\boxTopLeftCorner.png" />
+    <Content Include="DatePicker\img\boxTopPx.gif" />
+    <Content Include="DatePicker\img\boxTopPx.png" />
+    <Content Include="DatePicker\img\boxTopRightCorner.png" />
+    <Content Include="DatePicker\img\closeButton_down.gif" />
+    <Content Include="DatePicker\img\closeButton_normal.gif" />
+    <Content Include="DatePicker\img\closeButton_over.gif" />
+    <Content Include="DatePicker\img\monthBackward_down.gif" />
+    <Content Include="DatePicker\img\monthBackward_normal.gif" />
+    <Content Include="DatePicker\img\monthBackward_over.gif" />
+    <Content Include="DatePicker\img\monthForward_down.gif" />
+    <Content Include="DatePicker\img\monthForward_normal.gif" />
+    <Content Include="DatePicker\img\monthForward_over.gif" />
+    <Content Include="DatePicker\img\yearBackward_down.gif" />
+    <Content Include="DatePicker\img\yearBackward_normal.gif" />
+    <Content Include="DatePicker\img\yearBackward_over.gif" />
+    <Content Include="DatePicker\img\yearForward_down.gif" />
+    <Content Include="DatePicker\img\yearForward_normal.gif" />
+    <Content Include="DatePicker\img\yearForward_over.gif" />
+    <Content Include="DatePicker\jsDatePick.min.1.3.js" />
+    <Content Include="DatePicker\jsDatePick_ltr.min.css" />
+    <Content Include="default.aspx" />
+    <Content Include="EditPlayer.aspx" />
+    <Content Include="EditProfile.aspx" />
+    <Content Include="EverythingReport.aspx" />
+    <Content Include="FallBallReport.aspx" />
+    <Content Include="Forgot.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="ListEvents.aspx" />
+    <Content Include="main.aspx" />
+    <Content Include="ManageEvents.aspx" />
+    <Content Include="ManagePlayers.aspx" />
+    <Content Include="NotPaidReport.aspx" />
+    <Content Include="NotPaidSignedUpLastYearReport.aspx" />
+    <Content Include="paypal\listener.aspx" />
+    <Content Include="Profile.aspx" />
+    <Content Include="PurchaseHistory.aspx" />
+    <Content Include="rd.aspx" />
+    <Content Include="Reports.aspx" />
+    <Content Include="RisingStarReport.aspx" />
+    <Content Include="Summer.aspx" />
+    <Content Include="ThankYou.aspx" />
+    <Content Include="Themes\teal\css\style.css" />
+    <Content Include="Themes\teal\images\head_bg.gif" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgeReport.aspx.cs">
+      <DependentUpon>AgeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgeReport.aspx.designer.cs">
+      <DependentUpon>AgeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackUp.aspx.cs">
+      <DependentUpon>BackUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackUp.aspx.designer.cs">
+      <DependentUpon>BackUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonFunctions.cs" />
+    <Compile Include="Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Header.ascx.cs">
+      <DependentUpon>Head.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Header.ascx.designer.cs">
+      <DependentUpon>Head.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\HeaderMenu.ascx.cs">
+      <DependentUpon>HeaderMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\HeaderMenu.ascx.designer.cs">
+      <DependentUpon>HeaderMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DBCommon.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditPlayer.aspx.cs">
+      <DependentUpon>EditPlayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditPlayer.aspx.designer.cs">
+      <DependentUpon>EditPlayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventItem.cs" />
+    <Compile Include="EverythingReport.aspx.cs">
+      <DependentUpon>EverythingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EverythingReport.aspx.designer.cs">
+      <DependentUpon>EverythingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FallBallReport.aspx.cs">
+      <DependentUpon>FallBallReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FallBallReport.aspx.designer.cs">
+      <DependentUpon>FallBallReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forgot.aspx.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forgot.aspx.designer.cs">
+      <DependentUpon>Forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListEvents.aspx.cs">
+      <DependentUpon>ListEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListEvents.aspx.designer.cs">
+      <DependentUpon>ListEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageEvents.aspx.cs">
+      <DependentUpon>ManageEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageEvents.aspx.designer.cs">
+      <DependentUpon>ManageEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePlayers.aspx.cs">
+      <DependentUpon>ManagePlayers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagePlayers.aspx.designer.cs">
+      <DependentUpon>ManagePlayers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemberData.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemberData.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="NotPaidReport.aspx.cs">
+      <DependentUpon>NotPaidReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotPaidReport.aspx.designer.cs">
+      <DependentUpon>NotPaidReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotPaidSignedUpLastYearReport.aspx.cs">
+      <DependentUpon>NotPaidSignedUpLastYearReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotPaidSignedUpLastYearReport.aspx.designer.cs">
+      <DependentUpon>NotPaidSignedUpLastYearReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paypal\listener.aspx.cs">
+      <DependentUpon>listener.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paypal\listener.aspx.designer.cs">
+      <DependentUpon>listener.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseHistory.aspx.cs">
+      <DependentUpon>PurchaseHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseHistory.aspx.designer.cs">
+      <DependentUpon>PurchaseHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rd.aspx.cs">
+      <DependentUpon>rd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rd.aspx.designer.cs">
+      <DependentUpon>rd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reg.Master.cs">
+      <DependentUpon>Reg.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reg.Master.designer.cs">
+      <DependentUpon>Reg.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RegexUtilities.cs" />
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RisingStarReport.aspx.cs">
+      <DependentUpon>RisingStarReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RisingStarReport.aspx.designer.cs">
+      <DependentUpon>RisingStarReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Summer.aspx.cs">
+      <DependentUpon>Summer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Summer.aspx.designer.cs">
+      <DependentUpon>Summer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThankYou.aspx.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThankYou.aspx.designer.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MemberData.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MemberData.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reg.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MemberData.dbml.layout">
+      <DependentUpon>MemberData.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>21936</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://reg.localhost.pmi.org</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

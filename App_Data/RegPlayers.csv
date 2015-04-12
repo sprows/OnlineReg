@@ -1,0 +1,9 @@
+PlayerID,MemberID,PlayerFirstName,PlayerLastName,StreetAddress,City,State,Zip,HeathIssues,BirthDate,Sex,OtherSpringSport,PrimaryCommitment,UpdateDate,CreateDate,RegMember
+14,16,Jon,Sprows,234 great lodge,aston,PA,19342,none,7/1/2009 12:00:00 AM,M,False,True,12/18/2013 2:20:50 PM,,OnlineReg.RegMember
+15,16,Lauren4,Sprows,456 nowhere,Aston,PA,19342,,11/4/2013 12:00:00 AM,M,True,True,12/18/2013 2:20:50 PM,,OnlineReg.RegMember
+16,17,Smithy,Jones,234 hhh tt yy,aston,PA,19014,,11/5/2002 12:00:00 AM,M,False,False,12/6/2013 3:57:00 PM,,OnlineReg.RegMember
+17,16,Harry4,Jones,345 yyy,aston,PA,19014,,11/4/2003 12:00:00 AM,M,,,12/18/2013 2:20:50 PM,,OnlineReg.RegMember
+18,18,Amy,Q,345 today world,aston,PA,19342,,12/6/2002 12:00:00 AM,F,,,12/2/2013 11:38:55 AM,12/2/2013 10:58:13 AM,OnlineReg.RegMember
+19,19,Cody,W,345 pole cat,media,PA,19014,none,12/9/2004 12:00:00 AM,M,True,False,12/2/2013 6:18:47 PM,12/2/2013 6:14:30 PM,OnlineReg.RegMember
+20,21,jay,O,234 Street road,aston,PA,19014,none,1/5/2006 12:00:00 AM,M,False,True,,12/7/2013 12:27:58 PM,OnlineReg.RegMember
+21,22,sam,IAm,234 great lodge,aston,Pennsylvania, US,19342,,12/3/2003 12:00:00 AM,M,,,,12/10/2013 7:46:47 PM,OnlineReg.RegMember

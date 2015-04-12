@@ -1,0 +1,13 @@
+EventID,EventName,EventPrice,Enabled,UpdateDate,CreateDate,RegOrders
+1,Register 1 child for AMLL Spring 2014 season,90,True,12/4/2013 4:50:53 PM,,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+2,Register 2 children for AMLL Spring 2014 season,175,True,12/4/2013 4:50:54 PM,,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+3,Register 3+ children for AMLL Spring 2014 season,250,True,12/4/2013 4:21:03 PM,,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+4,Opt out for snack bar (1 team),20,True,12/6/2013 1:47:21 PM,,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+5,Opt out for snack bar (2 teams),40,True,12/4/2013 4:21:05 PM,,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+6,Opt out for snack bar (3 teams),60,True,12/4/2013 4:21:06 PM,,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+7,Beef and Beer,50,True,12/4/2013 4:21:07 PM,,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+8,My test event,34,False,12/4/2013 4:50:09 PM,12/4/2013 4:48:46 PM,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+9,The best ever event,23,False,12/7/2013 6:20:23 PM,12/4/2013 4:50:27 PM,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+10,Laurens Softball,60,False,12/7/2013 6:20:27 PM,12/6/2013 3:56:33 PM,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+11,Fee for <b>One</b> Child (4/5/6 year olds) - Early Bird Price,2,True,1/3/2014 9:13:14 AM,1/3/2014 9:13:14 AM,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]
+12,Fee for <b>Two</b> Children (4/5/6 year olds) - Early Bird Price,150,True,1/3/2014 9:13:44 AM,1/3/2014 9:13:44 AM,System.Data.Linq.EntitySet`1[OnlineReg.RegOrder]

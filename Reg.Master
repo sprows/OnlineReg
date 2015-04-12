@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Reg.master.cs" Inherits="OnlineReg.Reg" %>
+<%@ Register src="controls/Head.ascx" tagname="Header" tagprefix="uc1" %>
+<%@ Register src="controls/HeaderMenu.ascx" tagname="HeaderMenu" tagprefix="uc2" %>
+<%@ Register src="controls/footer.ascx" tagname="footer" tagprefix="uc3" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<uc1:Header ID="HeaderControl" runat="server" />
+<body>
+<form id="form2" runat="server">
+<div class="clear"></div>
+<div class="clear"></div>
+<div id="wrapper_sec">
+<uc2:HeaderMenu ID="HeaderMenu" runat="server" />
+  <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+
+       
+</asp:ContentPlaceHolder>
+  <div class="clear"></div>
+  <uc3:footer ID="footer1" runat="server" />
+</div>
+</form>
+</body>
+</html>

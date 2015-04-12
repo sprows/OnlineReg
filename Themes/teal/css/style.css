@@ -1,0 +1,401 @@
+﻿/*
+=======================================================================
+	General Rules
+=======================================================================
+*/
+* {
+	padding:0px;
+	margin:0px;
+}
+
+.buffer 
+{
+    padding:3px;
+	margin:3px;
+}
+
+button {
+	/*width:85px;*/
+	background-color:#c1272c;
+	color:#fff;
+	padding:4px 8px;
+	border:0px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor:pointer;
+}
+
+body {
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size:13px;
+	color:#666;
+	float:left;
+	width:100%;
+}
+a {
+	color:#6b898b;
+}
+a:hover {
+	color: #8bb5b7;
+}
+table.categories {
+	width: 100%;
+}
+table.categories tr {
+	height: 25px;
+}
+table.categories a {
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	color:#7F4F7B;
+	font-size:14px;
+}
+table.categories a:hover {
+	color: #8bb5b7;
+}
+a img {
+	border:none;
+	float:left;
+}
+.clear {
+	clear:both;
+	overflow:hidden;
+	height:0px;
+}
+h1, h2, h3, h4 {
+	font-family: 'Open Sans', sans-serif;
+}
+h1 {
+	font-size:28px;
+	font-weight:normal;
+	padding:10px 0px 13px 0px;
+	text-align:center;
+	color:#7F4F7B;
+}
+h2, td h2 {
+	font-size:18px;
+	font-weight:normal;
+}
+h3 {
+	font-size:18px;
+	font-weight:normal;
+	color:#7F4F7B;
+}
+h3.title {
+	padding-top:20px;
+}
+h4 {
+	font-size: 22px;
+	font-weight:normal;
+}
+h5 {
+	font-size:14px;
+	font-weight:normal;
+}
+h6 {
+	font-size:12px;
+	font-weight:normal;
+}
+p {
+	line-height:18px;
+}
+p.headline {
+	font-size: 22px;
+	line-height:29px;
+	padding-bottom:20px;
+}
+p span {
+	color: #8bb5b7;
+}
+.left {
+	float:left !important;
+}
+.right {
+	float:right !important;
+}
+/*
+=======================================================================
+	Buttons
+=======================================================================
+*/
+/*Form button*/
+#searchbox {
+	background: #c2c2c2;
+	background-image: -moz-linear-gradient(#fff, #c2c2c2);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #c2c2c2), color-stop(1, #fff));
+	-moz-border-radius: 35px;
+	border-radius: 35px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #e1e1e1 #c2c2c2 #b7b7b7;
+	width: 500px;
+	height: 35px;
+	padding: 10px;
+	margin: 10px 0px 20px 0px;
+	overflow: hidden;
+}
+#SearchTextBox, #SearchButton {
+	float: left;
+}
+#SearchTextBox {
+	padding: 5px 9px;
+	height: 23px;
+	width: 380px;
+	border: 1px solid #c2c2c2;
+	font: normal 13px 'trebuchet MS', arial, helvetica;
+	background: #f1f1f1;
+	-moz-border-radius: 50px 3px 3px 50px;
+	border-radius: 50px 3px 3px 50px;
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);
+}
+/* ----------------------- */
+#SearchButton {
+	background: ##6b898b;
+	background-image: -moz-linear-gradient(#9cbbbd, ##6b898b);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #82a2a4), color-stop(1, #9cbbbd));
+	-moz-border-radius: 3px 50px 50px 3px;
+	border-radius: 3px 50px 50px 3px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #7eba7c #578e57 #447d43;
+	-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+	-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+	height: 35px;
+	margin: 0 0 0 10px;
+	padding: 0;
+	width: 90px;
+	cursor: pointer;
+	font: bold 14px 'Open Sans', sans-serif;
+	color: #23441e;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+#SearchButton:hover {
+	background: #9cbbbd;
+	background-image: -moz-linear-gradient(##6b898b, #9cbbbd);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #9cbbbd), color-stop(1, ##6b898b));
+}
+#SearchButton:active {
+	background: #9cbbbd;
+	outline: none;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+ #SearchButton::-moz-focus-inner {
+ border: none;
+}
+ #SearchTextBoxh::-webkit-input-placeholder {
+ color: #9c9c9c;
+ font-style: italic;
+}
+ #SearchTextBox:-moz-placeholder {
+ color: #9c9c9c;
+ font-style: italic;
+}
+#SearchTextBox.placeholder {
+	color: #9c9c9c !important;
+	font-style: italic;
+}
+#SearchTextBox:focus {
+	border-color: #8badb4;
+	background: #fff;
+	outline: none;
+}
+/*
+=======================================================================
+	Wrapper Section
+=======================================================================
+*/
+#wrapper_sec {
+	width:100%;
+}
+.inner {
+	width:960px;
+	margin:0px auto;
+}
+/*
+=======================================================================
+	Master Header
+=======================================================================
+*/
+#masthead {
+	width:100%;
+	height:149px;
+	background-image:url(/Themes/teal/images/head_bg.gif);
+	background-repeat:repeat-x;
+	background-position:top;
+	margin-bottom: 30px;
+}
+.logo_box {
+	float:left;
+	margin: 20px 0px 0px 0px;
+}
+
+.slogan {
+	padding:20px 0px 0px 0px;
+	width:300px;
+	font-style:italic;
+	color:#f5f5f5;
+	text-align:center;
+	float:right;
+}
+.navigation {
+	position:absolute;
+	top:110px;
+	font-size:14px;
+	width: 100%;
+}
+.navigation ul {
+	z-index:100;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+/*Top level list items*/
+.navigation ul li {
+	position: relative;
+	display: inline;
+	float: left;
+	font-family: 'Open Sans', sans-serif;
+}
+/*Top level menu link items style*/
+.navigation ul li a {
+	display: block;
+	color: black;
+	padding: 8px 20px 5px 20px;
+	border-right: 1px solid #d8d6d6;
+	text-decoration: none;
+}
+.navigation ul li a:link, .ddsmoothmenu ul li a:visited {
+	color: #37535b;
+}
+.navigation ul li a.selected {
+	background:#ccc;
+
+}
+.navigation ul li a:hover {
+	background:#ccc;
+}
+/*
+=======================================================================
+	Content Section Rules
+=======================================================================
+*/
+#content_sec {
+	width:960px;
+	margin:0px auto;
+}
+/*
+=======================================================================
+	Banner Rules
+=======================================================================
+*/
+.banner {
+	width:956px;
+	height: 500px;
+	background: #eaf8fc;
+	background-image: -moz-linear-gradient(#fff, #ebebeb);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ebebeb), color-stop(1, #fff));
+	-moz-border-radius: 35px;
+	border-radius: 35px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #ebebeb #e1e1e1 #c2c2c2;
+	margin:10px 0px 70px 0px;
+	padding:6px;
+}
+.banner_left {
+	width:310px;
+	height:250px;
+	float:left;
+	color:#000;
+	padding: 5px 10px 10px 15px;
+}
+.banner_right {
+	float:right;
+	width:600px;
+	padding-top:30px;
+}
+.banner_image {
+	padding:20px 0px 20px 0px;
+	width: 295px;
+}
+/*
+=======================================================================
+	Footer Rules
+=======================================================================
+*/
+#footer {
+	width:100%;
+	background: #edecec;
+	border-top:#e1dddd solid 1px;
+	margin-top:20px;
+	float:left;
+	padding:20px 0px;
+	color:#FFF;
+}
+.footer_left {
+	float:left;
+	width: 480px;
+	color:#666;
+	font-size:10px;
+}
+.footer_right {
+	float:left;
+	width: 450px;
+}
+#footer .footerlinks {
+	width:220px;
+	float:left;
+	margin-left:20px;
+}
+.footerlinks ul {
+	width:220px;
+	float:left;
+	list-style:none;
+}
+.footerlinks ul li {
+	width:220px;
+	float:left;
+	padding:5px 0px;
+}
+.footerlinks ul li a {
+	color:#FFF;
+}
+.footerlinks ul li a:hover {
+	text-decoration:underline;
+}
+.footerlinks h6 {
+	padding:0px 0px 7px 0px;
+	border-bottom:#6d845f solid 1px;
+	margin:0px 0px 10px 0px;
+}
+.copyrights {
+	float:right;
+}
+.copyrights ul.copylinks {
+	float:right;
+	list-style:none;
+	padding:0;
+}
+.copyrights ul.copylinks li {
+	float:left;
+	padding:0px 10px;
+	border-right: 1px solid #666; 
+	color:#666;
+}
+.copyrights ul.copylinks li:last-child {
+	border-right: 0; 
+}
+.copyrights ul.copylinks li a {
+	color:#666;
+	font-size: 9px;
+	text-decoration: none;
+}
+.copyrights ul.copylinks li a:hover {
+	color: #7aac20;
+}
